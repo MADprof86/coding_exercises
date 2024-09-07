@@ -1,4 +1,4 @@
-package pl.coderslab;
+package Classes;
 
 public class WeatherClient {
     private WeatherService weatherService;

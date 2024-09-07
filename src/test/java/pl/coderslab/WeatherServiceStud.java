@@ -1,6 +1,8 @@
 package pl.coderslab;
 
-public class WeatherServiceStud implements WeatherService{
+import Classes.WeatherService;
+
+public class WeatherServiceStud implements WeatherService {
     @Override
     public Double getCurrentTemperature(String city) {
         return switch(city){

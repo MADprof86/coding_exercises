@@ -1,4 +1,4 @@
-package pl.coderslab;
+package Classes;
 
 public interface WeatherService {
     Double getCurrentTemperature(String city);
