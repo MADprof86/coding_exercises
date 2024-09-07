@@ -1,6 +1,9 @@
-package Classes;
+package pl.coderslab.Classes;
 
 import org.junit.jupiter.api.Test;
+import pl.coderslab.Classes.Order;
+import pl.coderslab.Classes.OrderService;
+import pl.coderslab.Classes.Product;
 
 import java.util.Arrays;
 import java.util.List;

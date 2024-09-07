@@ -2,7 +2,7 @@
 For now it has to be ok as a header
 KZ
  */
-package Classes;
+package pl.coderslab.Classes;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

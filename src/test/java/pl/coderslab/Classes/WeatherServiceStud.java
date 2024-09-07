@@ -1,6 +1,6 @@
-package pl.coderslab;
+package pl.coderslab.Classes;
 
-import Classes.WeatherService;
+import pl.coderslab.Classes.WeatherService;
 
 public class WeatherServiceStud implements WeatherService {
     @Override

@@ -1,6 +1,4 @@
-package Classes;
-
-import java.util.List;
+package pl.coderslab.Classes;
 
 public class OrderService {
     public double calculateTotalPrice(Order order) {

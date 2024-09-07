@@ -1,14 +1,17 @@
-package pl.coderslab;
+package pl.coderslab.Classes;
 
 
-import Classes.WeatherClient;
-import Classes.WeatherService;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
-
+@ExtendWith(MockitoExtension.class)
 class WeatherClientTest {
+    @Mock
+    private WeatherService weatherService;
 
     WeatherServiceStud weatherServiceStud = new WeatherServiceStud();
     WeatherClient weatherClient = new WeatherClient(weatherServiceStud);
@@ -33,5 +36,16 @@ class WeatherClientTest {
         WeatherClient weatherClient = new WeatherClient(mock);
         //when, than
         assertEquals("Temperatura w Warszawa wynosi: 15.0°C",weatherClient.getWeatherReport("Warszawa"));
+      }
+      @Test
+    void testGetWeatherReport_ReturnsProperMessageMockit(){
+
+        when(weatherService.getCurrentTemperature("Warszawa")).thenReturn(15.0);
+        WeatherClient weatherClient = new WeatherClient(weatherService);
+
+        String resultMesage = weatherClient.getWeatherReport("Warszawa");
+        assertEquals("Temperatura w Warszawa wynosi: 15.0°C",resultMesage);
+
+
       }
 }
