@@ -15,7 +15,6 @@ class CountConformingBitmasksTest {
         int result = countConformingBitmasks.solution(A,B,C);
 
         assertEquals(8,result);
-        assertT
 
     }
     @Test
